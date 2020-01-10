@@ -1,0 +1,110 @@
+This code allows you to retrieve data from an action using the actions('action_name') function in an expression.
+
+Step 1: Add the <b>Parse JSON <b/> action - category Data Operations 
+  Step 1.1: In the "Content" field, type this expression including the action name you want to retrieve data for: actions('action_name')
+  Step 1.2: Click "Generate from sample"
+  Ste[ 1.3: Paste the JSON code below and click "Done"
+Step 2: Add the "Select" action - category Data Operations 
+  Step 2.1: In the "From" field, use the "clientKeywords" dynamic content from the "Parse JSON" action
+  Step 2.2: In the "Map" field, type "Status" as the key and the dynamic contant "status" as the value
+
+You can now use the status dynamic content in your "Condition" action - category Control
+
+The values of status are: Succeeded, Failed, Cancelled
+
+{
+	"name": "Update_record",
+	"inputs": {
+		"method": "patch",
+		"body": {
+			"displayName": "Brian Gustavson",
+			"type": "Person",
+			"address": {
+				"street": "415 N. LaSalle St., #501",
+				"city": "Chicago",
+				"state": "Illinois",
+				"countryLetterCode": null,
+				"postalCode": "60654"
+			},
+			"phoneNumber": null,
+			"email": "bg@1060llc.com",
+			"website": null
+		},
+		"path": "/v2/environments/PRODUCTIONSANDBOX/datasets/Zelman%2520and%2520Associates/tables/customers/items/7d680ead-2833-ea11-a812-000d3a0297e5",
+		"host": {
+			"api": {
+				"runtimeUrl": "https://unitedstates-002.azure-apim.net/apim/dynamicssmbsaas"
+			},
+			"connection": {
+				"name": "/providers/Microsoft.PowerApps/apis/shared_dynamicssmbsaas/connections/shared-dynamicssmbsa-7243099f-a987-4698-92f8-a2b902cc7281"
+			}
+		},
+		"authentication": {
+			"scheme": "Key",
+			"parameter": "*sanitized*",
+			"type": "Raw"
+		}
+	},
+	"outputs": {
+		"statusCode": 200,
+		"headers": {
+			"Pragma": "no-cache",
+			"Vary": "Accept-Encoding",
+			"x-ms-request-id": "2b1f9488-df33-46e6-8741-ae0c8347ba3b",
+			"OData-Version": "4.0",
+			"Strict-Transport-Security": "max-age=31536000",
+			"X-Content-Type-Options": "nosniff",
+			"X-Frame-Options": "DENY",
+			"Timing-Allow-Origin": "*",
+			"x-ms-apihub-cached-response": "true",
+			"Cache-Control": "no-cache",
+			"Date": "Fri, 10 Jan 2020 00:16:12 GMT",
+			"Set-Cookie": "ARRAffinity=23be873f7786ea78a9e263d15fdf64f0d809bd2b029a8d0362c0cebbdc5310d6;Path=/;HttpOnly;Domain=dynamicssmbsaas-eus.azconn-eus.p.azurewebsites.net",
+			"X-AspNet-Version": "4.0.30319",
+			"X-Powered-By": "ASP.NET",
+			"Content-Type": "application/json; odata.metadata=minimal",
+			"Expires": "-1",
+			"Content-Length": "1161"
+		},
+		"body": {
+			"@odata.context": "https://dynamicssmbsaas-eus.azconn-eus.p.azurewebsites.net/v2/$metadata#environments('PRODUCTIONSANDBOX')/datasets('Zelman%2520and%2520Associates')/tables('customers')/items/$entity",
+			"@odata.etag": "W/\"JzQ0O1c4Y1NLcFpETlFvc0lGQ1Y5NThaVzZUYVBYdmJabVhrbEl0aEpjR1BoTFE9MTswMDsn\"",
+			"ItemInternalId": "7d680ead-2833-ea11-a812-000d3a0297e5",
+			"id": "7d680ead-2833-ea11-a812-000d3a0297e5",
+			"number": "C00023",
+			"displayName": "Brian Gustavson",
+			"type": "Person",
+			"phoneNumber": "",
+			"email": "bg@1060llc.com",
+			"website": "",
+			"taxLiable": false,
+			"taxAreaId": "00000000-0000-0000-0000-000000000000",
+			"taxAreaDisplayName": "",
+			"taxRegistrationNumber": "",
+			"currencyId": "00000000-0000-0000-0000-000000000000",
+			"currencyCode": "USD",
+			"paymentTermsId": "00000000-0000-0000-0000-000000000000",
+			"shipmentMethodId": "00000000-0000-0000-0000-000000000000",
+			"paymentMethodId": "00000000-0000-0000-0000-000000000000",
+			"blocked": " ",
+			"lastModifiedDateTime": "2020-01-10T00:16:12.303Z",
+			"address": {
+				"@odata.type": "#Microsoft.Azure.Connectors.Common.OData.Model.SubItem",
+				"street": "415 N. LaSalle St., #501",
+				"city": "Chicago",
+				"state": "Illinois",
+				"countryLetterCode": "",
+				"postalCode": "60654"
+			}
+		}
+	},
+	"startTime": "2020-01-10T00:16:12.0687112Z",
+	"endTime": "2020-01-10T00:16:12.5061865Z",
+	"trackingId": "16a7f38c-4777-4eb3-bc5f-3e435ab74c6f",
+	"clientTrackingId": "08586229996864319014575197028CU35",
+	"clientKeywords": [
+		"testFlow"
+	],
+	"code": "OK",
+	"status": "Succeeded"
+}
