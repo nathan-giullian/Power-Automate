@@ -1,12 +1,9 @@
 This code allows you to retrieve data from an action using the actions('action_name') function in an expression.
 
-Step 1: Add the <b>Parse JSON <b/> action - category Data Operations 
+Step 1: Add the "Parse JSON" action - category Data Operations 
   Step 1.1: In the "Content" field, type this expression including the action name you want to retrieve data for: actions('action_name')
   Step 1.2: Click "Generate from sample"
-  Ste[ 1.3: Paste the JSON code below and click "Done"
-Step 2: Add the "Select" action - category Data Operations 
-  Step 2.1: In the "From" field, use the "clientKeywords" dynamic content from the "Parse JSON" action
-  Step 2.2: In the "Map" field, type "Status" as the key and the dynamic contant "status" as the value
+  Step 1.3: Paste the JSON code below and click "Done"
 
 You can now use the status dynamic content in your "Condition" action - category Control
 
