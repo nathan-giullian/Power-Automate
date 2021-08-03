@@ -1,0 +1,17 @@
+{
+  "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/<resource group id>/providers/Microsoft.Logic/workflows/00000000-0000-0000-0000-000000000000",
+  "name": "00000000-0000-0000-0000-000000000000",
+  "type": "Microsoft.Logic/workflows",
+  "location": "<region>",
+  "tags": {
+    "flowDisplayName": "<flow display name>",
+    "environmentName": "00000000-0000-0000-0000-000000000000",
+    "logicAppName": "00000000-0000-0000-0000-000000000000",
+    "environmentFlowSuspensionReason": "<value>"
+  },
+  "run": {
+    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/<resource group id>/providers/Microsoft.Logic/workflows/00000000-0000-0000-0000-000000000000/runs/<run id>",
+    "name": "<run id>",
+    "type": "Microsoft.Logic/workflows/runs"
+  }
+}
