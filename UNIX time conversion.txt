@@ -1,0 +1,9 @@
+Converting to UNIX time in Power Automate
+
+The <date input> can be a dynamic field from a previous step, utcNow(), or hard coded like this: '2021-04-12'
+
+Place this code in a compose action to see the result. You can also place this code directly into another step.
+
+div(sub(ticks(<date input>),ticks('1970-01-01')), 10000000)
+
+Source: joelblogs comment here: https://powerusers.microsoft.com/t5/Power-Automate-Ideas/Convert-Tima-Date-format-to-UNIX-Timestamp/idi-p/145710
